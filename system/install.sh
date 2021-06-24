@@ -2,6 +2,7 @@
 #
 brew install 1password
 brew install alfred
+brew install autojump
 brew install calibre
 brew install google-chrome
 brew install mailmate
