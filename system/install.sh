@@ -2,6 +2,7 @@
 #
 brew install 1password
 brew install alfred
+brew install asdf
 brew install autojump
 brew install calibre
 brew install google-chrome
