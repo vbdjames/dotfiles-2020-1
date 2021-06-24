@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-brew install -q 1password
+brew install 1password
 brew install alfred
 brew install calibre
 brew install google-chrome
@@ -8,6 +8,7 @@ brew install mailmate
 brew install mas
 brew install obsidian
 brew install rectangle
+brew install the_silver_searcher
 brew install tower
 
 # sign in to the App Store
