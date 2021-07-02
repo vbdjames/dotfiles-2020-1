@@ -6,6 +6,7 @@ brew install asdf
 brew install autojump
 brew install calibre
 brew install carbon-copy-cloner
+brew install fromscratch
 brew install google-chrome
 brew install mailmate
 brew install mas
