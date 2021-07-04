@@ -28,3 +28,9 @@ mas install  926036361 # LastPass
 mas install 1295203466 # Microsoft Remote Desktop
 mas install  904280696 # Things 3
 mas install 1529448980 # Reeder 5
+
+if [ ! -d /Applications/Epubor\ Ultimate.app ]; then
+  curl https://download.epubor.com/epubor_ultimate.zip --output ~/Downloads/epubor_ultimate.zip
+  unzip ~/Downloads/epubor_ultimate.zip -d ~/Downloads
+  open ~/Downloads/Ultimate.pkg
+fi
