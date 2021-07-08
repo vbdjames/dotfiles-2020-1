@@ -9,7 +9,6 @@ defaults write com.apple.dock autohide -bool true
 defaults write com.apple.dock autohide-delay -float 0
 defaults write com.apple.dock no-glass -bool true
 defaults write com.apple.dock no-bouncing -bool true
-defaults write com.apple.universalaccess reduceTransparency -bool true
 
 # Use AirDrop over every interface.
 defaults write com.apple.NetworkBrowser BrowseAllInterfaces 1
