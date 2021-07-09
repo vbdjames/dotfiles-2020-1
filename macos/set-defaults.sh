@@ -16,6 +16,9 @@ defaults write com.apple.NetworkBrowser BrowseAllInterfaces 1
 # Always open everything in Finder's list view.
 defaults write com.apple.Finder FXPreferredViewStyle Nlsv
 
+# New Fiinder windows open home directory
+defaults write com.apple.Finder NewWindowTargetPath file:///Users/dougjames/
+
 # Misc finder settings
 defaults write com.apple.finder ShowStatusBar -bool true
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
@@ -68,3 +71,4 @@ defaults write com.apple.dock wvous-br-modifier -int 0
 
 # Restart the Dock to put all of this into effect
 killall Dock
+killall Finder
