@@ -26,4 +26,4 @@ mas install  926036361 # LastPass
 mas install 1295203466 # Microsoft Remote Desktop
 mas install  904280696 # Things 3
 mas install 1529448980 # Reeder 5
-
+mas install 1289197285 # MindNode
