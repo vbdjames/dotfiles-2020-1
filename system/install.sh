@@ -12,7 +12,6 @@ brew install mas
 brew install obsidian
 brew install rectangle
 brew install the_silver_searcher
-brew install tower
 
 # sign in to the App Store
 if ! mas account >/dev/null; then
