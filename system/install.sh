@@ -9,6 +9,7 @@ brew install carbon-copy-cloner
 brew install fromscratch
 brew install google-chrome
 brew install mas
+brew install neovim
 brew install obsidian
 brew install rectangle
 brew install the_silver_searcher
