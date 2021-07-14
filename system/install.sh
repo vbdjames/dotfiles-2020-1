@@ -9,6 +9,7 @@ brew install carbon-copy-cloner
 brew install fromscratch
 brew install git-flow
 brew install google-chrome
+brew install keyboard-maestro
 brew install mas
 brew install neovim
 brew install obsidian
