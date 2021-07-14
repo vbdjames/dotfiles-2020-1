@@ -7,6 +7,7 @@ brew install autojump
 brew install calibre
 brew install carbon-copy-cloner
 brew install fromscratch
+brew install git-flow
 brew install google-chrome
 brew install mas
 brew install neovim
