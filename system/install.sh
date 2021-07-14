@@ -22,6 +22,7 @@ if ! mas account >/dev/null; then
     sleep 5
   done
 fi
+mas install 1055511498 # Day One
 mas install  975937182 # Fantastical
 mas install  504284434 # Multi Monitor Wallpaper
 mas install  926036361 # LastPass
