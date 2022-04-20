@@ -1,0 +1,279 @@
+#
+# vbdjames@gmail.com
+#
+IMAPAccount vbdjames@gmail.com
+Host imap.gmail.com
+User vbdjames@gmail.com
+PassCmd "security find-internet-password -a vbdjames@gmail.com -s imap.gmail.com -w"
+AuthMechs PLAIN
+SSLType IMAPS
+PipelineDepth 50
+
+IMAPStore vbdjames-remote
+Account vbdjames@gmail.com
+
+MaildirStore vbdjames-local
+Path ~/Maildir/vbdjames@gmail.com/
+Inbox ~/Maildir/vbdjames@gmail.com/inbox
+SubFolders Verbatim
+
+Channel vbdjames-inbox
+Far :vbdjames-remote:
+Near :vbdjames-local:
+Patterns "INBOX"
+Create Both
+Expunge Both
+SyncState *
+
+Channel vbdjames-archive
+Far :vbdjames-remote:"[Gmail]/All Mail"
+Near :vbdjames-local:archive
+Create Both
+Expunge Both
+SyncState *
+
+Channel vbdjames-drafts
+Far :vbdjames-remote:[Gmail]/Drafts
+Near :vbdjames-local:drafts
+Create Both
+Expunge Both
+SyncState *
+
+Channel vbdjames-flagged
+Far :vbdjames-remote:"[Gmail]/Starred"
+Near :vbdjames-local:flagged
+Create Both
+Expunge Both
+SyncState *
+
+Channel vbdjames-sent
+Far :vbdjames-remote:"[Gmail]/Sent Mail"
+Near :vbdjames-local:sent
+Create Both
+Expunge Both
+SyncState *
+
+Channel vbdjames-trash
+Far :vbdjames-remote:"[Gmail]/Trash"
+Near :vbdjames-local:trash
+Create Both
+Expunge Both
+SyncState *
+
+Group vbdjames
+Channel vbdjames-inbox
+Channel vbdjames-archive
+Channel vbdjames-drafts
+Channel vbdjames-flagged
+Channel vbdjames-sent
+Channel vbdjames-trash
+
+#
+# doug.james@customviewbook.com
+#
+IMAPAccount doug.james@customviewbook.com
+Host imap.gmail.com
+User doug.james@customviewbook.com
+PassCmd "security find-internet-password -a doug.james@customviewbook.com -s imap.gmail.com -w"
+AuthMechs PLAIN
+SSLType IMAPS
+PipelineDepth 50
+
+IMAPStore cvb-remote
+Account doug.james@customviewbook.com
+
+MaildirStore cvb-local
+Path ~/Maildir/doug.james@customviewbook.com/
+Inbox ~/Maildir/doug.james@customviewbook.com/inbox
+SubFolders Verbatim
+
+Channel cvb-inbox
+Far :cvb-remote:
+Near :cvb-local:
+Patterns "INBOX"
+Create Both
+Expunge Both
+SyncState *
+
+Channel cvb-archive
+Far :cvb-remote:"[Gmail]/All Mail"
+Near :cvb-local:archive
+Create Both
+Expunge Both
+SyncState *
+
+Channel cvb-drafts
+Far :cvb-remote:[Gmail]/Drafts
+Near :cvb-local:drafts
+Create Both
+Expunge Both
+SyncState *
+
+Channel cvb-flagged
+Far :cvb-remote:"[Gmail]/Starred"
+Near :cvb-local:flagged
+Create Both
+Expunge Both
+SyncState *
+
+Channel cvb-sent
+Far :cvb-remote:"[Gmail]/Sent Mail"
+Near :cvb-local:sent
+Create Both
+Expunge Both
+SyncState *
+
+Channel cvb-trash
+Far :cvb-remote:"[Gmail]/Trash"
+Near :cvb-local:trash
+Create Both
+Expunge Both
+SyncState *
+
+Group cvb
+Channel cvb-inbox
+Channel cvb-archive
+Channel cvb-drafts
+Channel cvb-flagged
+Channel cvb-sent
+Channel cvb-trash
+
+#
+# doug.james@digitalwave.com
+#
+IMAPAccount doug.james@digitalwave.com
+Host imap.gmail.com
+User doug.james@digitalwave.com
+PassCmd "security find-internet-password -a doug.james@digitalwave.com -s imap.digitalwave.com -w"
+AuthMechs PLAIN
+SSLType IMAPS
+PipelineDepth 50
+
+IMAPStore dw-remote
+Account doug.james@digitalwave.com
+
+MaildirStore dw-local
+Path ~/Maildir/doug.james@digitalwave.com/
+Inbox ~/Maildir/doug.james@digitalwave.com/inbox
+SubFolders Verbatim
+
+Channel dw-inbox
+Far :dw-remote:
+Near :dw-local:
+Patterns "INBOX"
+Create Both
+Expunge Both
+SyncState *
+
+Channel dw-archive
+Far :dw-remote:"[Gmail]/All Mail"
+Near :dw-local:archive
+Create Both
+Expunge Both
+SyncState *
+
+Channel dw-drafts
+Far :dw-remote:[Gmail]/Drafts
+Near :dw-local:drafts
+Create Both
+Expunge Both
+SyncState *
+
+Channel dw-flagged
+Far :dw-remote:"[Gmail]/Starred"
+Near :dw-local:flagged
+Create Both
+Expunge Both
+SyncState *
+
+Channel dw-sent
+Far :dw-remote:"[Gmail]/Sent Mail"
+Near :dw-local:sent
+Create Both
+Expunge Both
+SyncState *
+
+Channel dw-trash
+Far :dw-remote:"[Gmail]/Trash"
+Near :dw-local:trash
+Create Both
+Expunge Both
+SyncState *
+
+Group dw
+Channel dw-inbox
+Channel dw-archive
+Channel dw-drafts
+Channel dw-flagged
+Channel dw-sent
+Channel dw-trash
+
+#
+# doug@dwjames.org 
+#
+IMAPAccount doug@dwjames.org
+Host mail.messagingengine.com
+User doug@dwjames.org
+PassCmd "security find-internet-password -a doug@dwjames.org -s imap.dwjames.org -w"
+AuthMechs PLAIN
+SSLType IMAPS
+PipelineDepth 50
+
+IMAPStore dwjames-remote
+Account doug@dwjames.org
+
+MaildirStore dwjames-local
+Path ~/Maildir/doug@dwjames.org/
+Inbox ~/Maildir/doug@dwjames.org/inbox
+Subfolders Verbatim
+
+Channel dwjames-inbox
+Far :dwjames-remote:
+Near :dwjames-local:
+Patterns "INBOX"
+Create Both
+Expunge Both
+SyncState *
+
+Channel dwjames-archive
+Far :dwjames-remote:Archive
+Near :dwjames-local:archive
+Create Both
+Expunge Both
+SyncState *
+
+Channel dwjames-drafts
+Far :dwjames-remote:Drafts
+Near :dwjames-local:drafts
+Create Both
+Expunge Both
+SyncState *
+
+Channel dwjames-flagged
+Far :dwjames-remote:Flagged
+Near :dwjames-local:flagged
+Create Both
+Expunge Both
+SyncState *
+
+Channel dwjames-sent
+Far :dwjames-remote:Sent
+Near :dwjames-local:sent
+Create Both
+Expunge Both
+SyncState *
+
+Channel dwjames-trash
+Far :dwjames-remote:Trash
+Near :dwjames-local:trash
+Create Both
+Expunge Both
+SyncState *
+
+Group dwjames
+Channel dwjames-inbox
+Channel dwjames-archive
+Channel dwjames-drafts
+Channel dwjames-flagged
+Channel dwjames-sent
+Channel dwjames-trash

@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+hdiutil attach ~/Support/keys.dmg

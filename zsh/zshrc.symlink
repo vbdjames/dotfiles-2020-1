@@ -58,3 +58,9 @@ bindkey "^[[B" down-line-or-beginning-search # Down
 
 # aliases
 alias vim=nvim
+
+# direnv
+eval "$(direnv hook zsh)"
+
+# asdf
+. $HOME/.asdf/asdf.sh

@@ -1,0 +1,38 @@
+defaults
+auth on
+tls on
+tls_trust_file /private/etc/ssl/cert.pem
+logfile ~/.msmtp.log
+
+# vbdjames@gmail.com
+account      vbdjames@gmail.com
+host         smtp.gmail.com
+port         587
+from         vbdjames@gmail.com
+user         vbdjames@gmail.com
+passwordeval "security find-internet-password -a vbdjames@gmail.com -s imap.gmail.com -w"
+
+# doug.james@digitalwave.com
+account      doug.james@digitalwave.com
+host         smtp.gmail.com
+port         587
+from         doug.james@digitalwave.com
+user         doug.james@digitalwave.com
+passwordeval "security find-internet-password -a doug.james@digitalwave.com -s imap.gmail.com -w"
+
+# doug.james@customviewbook.com
+account      doug.james@customviewbook.com
+host         smtp.gmail.com
+port         587
+from         doug.james@customviewbook.com
+user         doug.james@customviewbook.com
+passwordeval "security find-internet-password -a doug.james@customviewbook.com -s imap.gmail.com -w"
+
+# doug@dwjames.org
+account      doug@dwjames.org
+host         mail.messagingengine.com
+port         587
+from         doug@dwjames.org
+user         doug@dwjames.org
+passwordeval "security find-internet-password -a doug@dwjames.org -s mail.messagingengine.com -w"
+

@@ -1,0 +1,145 @@
+[general]
+ui = ttyui
+accounts = vbdjames@gmail.com, doug.james@customviewbook.com, doug.james@digitalwave.com, doug@dwjames.org
+pythonfile = ~/.offlineimap.py
+fsync = False
+ssl = False
+
+[Account vbdjames@gmail.com]
+localrepository = vbdjames-local
+remoterepository = vbdjames-remote
+
+[Repository vbdjames-local]
+type = Maildir
+localfolders = ~/Maildir/vbdjames@gmail.com
+nametrans = lambda folder: {'drafts':  '[Gmail]/Drafts',
+                            'sent':    '[Gmail]/Sent Mail',
+                            'flagged': '[Gmail]/Starred',
+                            'trash':   '[Gmail]/Trash',
+                            'archive': '[Gmail]/All Mail'
+                            }.get(folder, folder)
+
+[Repository vbdjames-remote]
+maxconnections = 1
+type = Gmail
+remoteuser = vbdjames@gmail.com
+remotepasseval = get_keychain_pass(account="vbdjames@gmail.com", server="imap.gmail.com")
+realdelete = no
+ssl = true
+sslcacertfile = /private/etc/ssl/cert.pem
+nametrans = lambda folder: {'[Gmail]/Drafts':    'drafts',
+                            '[Gmail]/Sent Mail': 'sent',
+                            '[Gmail]/Starred':   'starred',
+                            '[Gmail]/Trash':     'trash',
+                            '[Gmail]/All Mail':  'archive'
+                            }.get(folder, folder)
+
+folderfilter = lambda folder: folder not in ['[Gmail]/Trash',
+                                             '[Gmail]/Important',
+                                             '[Gmail]/Spam'
+                                             ]
+
+[Account doug.james@customviewbook.com]
+localrepository = cvb-local
+remoterepository = cvb-remote
+
+[Repository cvb-local]
+type = Maildir
+localfolders = ~/Maildir/doug.james@customviewbook.com
+nametrans = lambda folder: {'drafts':  '[Gmail]/Drafts',
+                            'sent':    '[Gmail]/Sent Mail',
+                            'flagged': '[Gmail]/Starred',
+                            'trash':   '[Gmail]/Trash',
+                            'archive': '[Gmail]/All Mail'
+                            }.get(folder, folder)
+
+[Repository cvb-remote]
+maxconnections = 1
+type = Gmail
+remoteuser = doug.james@customviewbook.com
+remotepasseval = get_keychain_pass(account="doug.james@customviewbook.com", server="imap.customviewbook.com")
+realdelete = no
+ssl = true
+sslcacertfile = /private/etc/ssl/cert.pem
+nametrans = lambda folder: {'[Gmail]/Drafts':    'drafts',
+                            '[Gmail]/Sent Mail': 'sent',
+                            '[Gmail]/Starred':   'starred',
+                            '[Gmail]/Trash':     'trash',
+                            '[Gmail]/All Mail':  'archive'
+                            }.get(folder, folder)
+
+folderfilter = lambda folder: folder not in ['[Gmail]/Trash',
+                                             '[Gmail]/Important',
+                                             '[Gmail]/Spam'
+                                             ]
+
+[Account doug.james@digitalwave.com]
+localrepository = dw-local
+remoterepository = dw-remote
+
+[Repository dw-local]
+type = Maildir
+localfolders = ~/Maildir/doug.james@digitalwave.com
+nametrans = lambda folder: {'drafts':  '[Gmail]/Drafts',
+                            'sent':    '[Gmail]/Sent Mail',
+                            'flagged': '[Gmail]/Starred',
+                            'trash':   '[Gmail]/Trash',
+                            'archive': '[Gmail]/All Mail'
+                            }.get(folder, folder)
+
+[Repository dw-remote]
+maxconnections = 1
+type = Gmail
+remoteuser = doug.james@digitalwave.com
+remotepasseval = get_keychain_pass(account="doug.james@digitalwave.com", server="imap.digitalwave.com")
+realdelete = no
+ssl = true
+sslcacertfile = /private/etc/ssl/cert.pem
+nametrans = lambda folder: {'[Gmail]/Drafts':    'drafts',
+                            '[Gmail]/Sent Mail': 'sent',
+                            '[Gmail]/Starred':   'starred',
+                            '[Gmail]/Trash':     'trash',
+                            '[Gmail]/All Mail':  'archive'
+                            }.get(folder, folder)
+
+folderfilter = lambda folder: folder not in ['[Gmail]/Trash',
+                                             '[Gmail]/Important',
+                                             '[Gmail]/Spam'
+                                             ]
+
+
+[Account doug@dwjames.org]
+localrepository = dwjames-local
+remoterepository = dwjames-remote
+
+[Repository dwjames-local]
+type = Maildir
+localfolders = ~/Maildir/doug@dwjames.org
+nametrans = lambda folder: {'drafts':  'Drafts',
+                            'sent':    'Sent',
+                            'flagged': 'Flagged',
+                            'trash':   'Trash',
+                            'archive': 'Archive'
+                            }.get(folder, folder)
+
+[Repository dwjames-remote]
+maxconnections = 1
+type = IMAP
+remotehost = mail.messagingengine.com
+remoteport = 993
+remoteuser = doug@dwjames.org
+remotepasseval = get_keychain_pass(account="doug@dwjames.org", server="imap.dwjames.org")
+realdelete = no
+ssl = true
+sslcacertfile = /private/etc/ssl/cert.pem
+nametrans = lambda folder: {'Drafts':    'drafts',
+                            'Sent': 'sent',
+                            'Flagged':   'flagged',
+                            'Trash':     'trash',
+                            'Archive':  'archive'
+                            }.get(folder, folder)
+
+folderfilter = lambda folder: folder not in ['Trash',
+                                             'Spam'
+                                             ]
+
